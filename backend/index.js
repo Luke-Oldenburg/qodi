@@ -13,11 +13,11 @@ express.get("/:upc", (req, res) => {
             if (food_data.foods[0]) {
                 console.log(`Found food with UPC ${req.params.upc}.`);
                 const chatCompletion = await openai.chat.completions.create({
-                    messages: [{role: "user", content: `${food_data.foods[0].ingredients} ${REQUEST_PROMPT}`}],
+                    messages: [{role: "user", content: `Ingredients: ${food_data.foods[0].ingredients}\n${REQUEST_PROMPT}`}],
                     model: "gpt-3.5-turbo",
                 });
 
-                console.log(`Responding with ${chatCompletion.choices[0].message.content}.`);
+                console.log(`Responding with:\n${chatCompletion.choices[0].message.content}`);
                 res.send(chatCompletion.choices[0].message.content);
             }
         });
