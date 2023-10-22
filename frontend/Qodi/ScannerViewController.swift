@@ -1,6 +1,6 @@
 //
 //  ScannerViewController.swift
-//  Verascan
+//  Qodi
 //
 //  Created by Miyaz Ansari on 7/25/23.
 //

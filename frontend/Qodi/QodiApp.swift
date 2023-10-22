@@ -1,6 +1,6 @@
 //
-//  Qodi1App.swift
-//  Qodi1
+//  QodiApp.swift
+//  Qodi
 //
 //  Created by Miyaz Ansari on 10/22/23.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Qodi1App: App {
+struct QodiApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
