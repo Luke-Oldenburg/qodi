@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC3FB33D2AE5A2EC002A60FA /* Qodi1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB33C2AE5A2EC002A60FA /* Qodi1App.swift */; };
+		FC3FB33F2AE5A2EC002A60FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB33E2AE5A2EC002A60FA /* ContentView.swift */; };
+		FC3FB3412AE5A2EE002A60FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3FB3402AE5A2EE002A60FA /* Assets.xcassets */; };
+		FC3FB3442AE5A2EE002A60FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3FB3432AE5A2EE002A60FA /* Preview Assets.xcassets */; };
+		FC3FB34B2AE5A348002A60FA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3FB34A2AE5A348002A60FA /* Launch Screen.storyboard */; };
+		FC3FB34D2AE5A363002A60FA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB34C2AE5A363002A60FA /* Profile.swift */; };
+		FC3FB34F2AE5A36A002A60FA /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB34E2AE5A36A002A60FA /* Saved.swift */; };
+		FC3FB3512AE5A374002A60FA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB3502AE5A374002A60FA /* Search.swift */; };
+		FC3FB3532AE5A37A002A60FA /* ScannerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB3522AE5A37A002A60FA /* ScannerRepresentable.swift */; };
+		FC3FB3552AE5A37F002A60FA /* ScannerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB3542AE5A37F002A60FA /* ScannerUI.swift */; };
+		FC3FB3572AE5A384002A60FA /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3FB3562AE5A384002A60FA /* ScannerViewController.swift */; };
+		FC3FB3592AE5A38C002A60FA /* Qodi New in Resources */ = {isa = PBXBuildFile; fileRef = FC3FB3582AE5A38C002A60FA /* Qodi New */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC3FB3392AE5A2EC002A60FA /* Qodi1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qodi1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3FB33C2AE5A2EC002A60FA /* Qodi1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qodi1App.swift; sourceTree = "<group>"; };
+		FC3FB33E2AE5A2EC002A60FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FC3FB3402AE5A2EE002A60FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC3FB3432AE5A2EE002A60FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC3FB34A2AE5A348002A60FA /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Qodi1/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FC3FB34C2AE5A363002A60FA /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = ../Qodi/Profile.swift; sourceTree = "<group>"; };
+		FC3FB34E2AE5A36A002A60FA /* Saved.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
+		FC3FB3502AE5A374002A60FA /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		FC3FB3522AE5A37A002A60FA /* ScannerRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerRepresentable.swift; sourceTree = "<group>"; };
+		FC3FB3542AE5A37F002A60FA /* ScannerUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerUI.swift; sourceTree = "<group>"; };
+		FC3FB3562AE5A384002A60FA /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		FC3FB3582AE5A38C002A60FA /* Qodi New */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Qodi New"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC3FB3362AE5A2EC002A60FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC3FB3302AE5A2EC002A60FA = {
+			isa = PBXGroup;
+			children = (
+				FC3FB34A2AE5A348002A60FA /* Launch Screen.storyboard */,
+				FC3FB34C2AE5A363002A60FA /* Profile.swift */,
+				FC3FB33B2AE5A2EC002A60FA /* Qodi1 */,
+				FC3FB33A2AE5A2EC002A60FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC3FB33A2AE5A2EC002A60FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC3FB3392AE5A2EC002A60FA /* Qodi1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC3FB33B2AE5A2EC002A60FA /* Qodi1 */ = {
+			isa = PBXGroup;
+			children = (
+				FC3FB34E2AE5A36A002A60FA /* Saved.swift */,
+				FC3FB33C2AE5A2EC002A60FA /* Qodi1App.swift */,
+				FC3FB3502AE5A374002A60FA /* Search.swift */,
+				FC3FB33E2AE5A2EC002A60FA /* ContentView.swift */,
+				FC3FB3522AE5A37A002A60FA /* ScannerRepresentable.swift */,
+				FC3FB3562AE5A384002A60FA /* ScannerViewController.swift */,
+				FC3FB3542AE5A37F002A60FA /* ScannerUI.swift */,
+				FC3FB3402AE5A2EE002A60FA /* Assets.xcassets */,
+				FC3FB3422AE5A2EE002A60FA /* Preview Content */,
+			);
+			path = Qodi1;
+			sourceTree = "<group>";
+		};
+		FC3FB3422AE5A2EE002A60FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FC3FB3432AE5A2EE002A60FA /* Preview Assets.xcassets */,
+				FC3FB3582AE5A38C002A60FA /* Qodi New */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC3FB3382AE5A2EC002A60FA /* Qodi1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3FB3472AE5A2EE002A60FA /* Build configuration list for PBXNativeTarget "Qodi1" */;
+			buildPhases = (
+				FC3FB3352AE5A2EC002A60FA /* Sources */,
+				FC3FB3362AE5A2EC002A60FA /* Frameworks */,
+				FC3FB3372AE5A2EC002A60FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Qodi1;
+			productName = Qodi1;
+			productReference = FC3FB3392AE5A2EC002A60FA /* Qodi1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC3FB3312AE5A2EC002A60FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					FC3FB3382AE5A2EC002A60FA = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FC3FB3342AE5A2EC002A60FA /* Build configuration list for PBXProject "Qodi1" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC3FB3302AE5A2EC002A60FA;
+			productRefGroup = FC3FB33A2AE5A2EC002A60FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC3FB3382AE5A2EC002A60FA /* Qodi1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC3FB3372AE5A2EC002A60FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3FB34B2AE5A348002A60FA /* Launch Screen.storyboard in Resources */,
+				FC3FB3442AE5A2EE002A60FA /* Preview Assets.xcassets in Resources */,
+				FC3FB3412AE5A2EE002A60FA /* Assets.xcassets in Resources */,
+				FC3FB3592AE5A38C002A60FA /* Qodi New in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC3FB3352AE5A2EC002A60FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3FB33F2AE5A2EC002A60FA /* ContentView.swift in Sources */,
+				FC3FB3532AE5A37A002A60FA /* ScannerRepresentable.swift in Sources */,
+				FC3FB34F2AE5A36A002A60FA /* Saved.swift in Sources */,
+				FC3FB3512AE5A374002A60FA /* Search.swift in Sources */,
+				FC3FB3552AE5A37F002A60FA /* ScannerUI.swift in Sources */,
+				FC3FB34D2AE5A363002A60FA /* Profile.swift in Sources */,
+				FC3FB33D2AE5A2EC002A60FA /* Qodi1App.swift in Sources */,
+				FC3FB3572AE5A384002A60FA /* ScannerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FC3FB3452AE5A2EE002A60FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC3FB3462AE5A2EE002A60FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC3FB3482AE5A2EE002A60FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Qodi1/Preview Content\"";
+				DEVELOPMENT_TEAM = MRVM4S35B7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to scan food items";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CAC.Qodi1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC3FB3492AE5A2EE002A60FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Qodi1/Preview Content\"";
+				DEVELOPMENT_TEAM = MRVM4S35B7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to scan food items";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CAC.Qodi1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC3FB3342AE5A2EC002A60FA /* Build configuration list for PBXProject "Qodi1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3FB3452AE5A2EE002A60FA /* Debug */,
+				FC3FB3462AE5A2EE002A60FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3FB3472AE5A2EE002A60FA /* Build configuration list for PBXNativeTarget "Qodi1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3FB3482AE5A2EE002A60FA /* Debug */,
+				FC3FB3492AE5A2EE002A60FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC3FB3312AE5A2EC002A60FA /* Project object */;
+}
