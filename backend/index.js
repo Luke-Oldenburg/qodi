@@ -17,8 +17,9 @@ express.get("/:upc", (req, res) => {
                     model: "gpt-3.5-turbo",
                 });
 
-                console.log(`Responding with:\n${chatCompletion.choices[0].message.content}`);
-                res.json(chatCompletion.choices[0].message.content);
+                let content = JSON.stringify(JSON.parse(chatCompletion.choices[0].message.content));
+                console.log(content);
+                res.json(JSON.parse(chatCompletion.choices[0].message.content));
 
             } else {
                 console.error(`No ingredients found for UPC ${req.params.upc}.`);
