@@ -7,16 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FCF87F502AE5B93E00DF2825 /* Qodi in Resources */ = {isa = PBXBuildFile; fileRef = FCF87F4F2AE5B93E00DF2825 /* Qodi */; };
+		268B11082AE639EF00083D1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B11072AE639EF00083D1F /* ViewController.swift */; };
+		268B110A2AE63FDC00083D1F /* BarcodeScannerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B11092AE63FDC00083D1F /* BarcodeScannerRepresentable.swift */; };
+		268B110C2AE6404A00083D1F /* BarcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B110B2AE6404A00083D1F /* BarcodeData.swift */; };
+		268B110E2AE6410D00083D1F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B110D2AE6410D00083D1F /* ResultView.swift */; };
+		26BBE1092AD0A139004B0350 /* QodiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE1082AD0A139004B0350 /* QodiApp.swift */; };
+		26BBE10D2AD0A139004B0350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BBE10C2AD0A139004B0350 /* Assets.xcassets */; };
+		26BBE1102AD0A139004B0350 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BBE10F2AD0A139004B0350 /* Preview Assets.xcassets */; };
+		26BBE1202AD0A29F004B0350 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE11F2AD0A29F004B0350 /* SplashScreenView.swift */; };
+		26BBE1262AD0A7DB004B0350 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE1252AD0A7DB004B0350 /* OnboardingView.swift */; };
+		26BBE1292AD0A838004B0350 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE1282AD0A838004B0350 /* HomeView.swift */; };
+		26BBE12B2AD0A97A004B0350 /* OnboardingViewPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE12A2AD0A97A004B0350 /* OnboardingViewPages.swift */; };
+		26BBE12D2AD0AAEB004B0350 /* FinalOnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE12C2AD0AAEB004B0350 /* FinalOnboardingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FCF87F3E2AE5B8F400DF2825 /* Qodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCF87F4F2AE5B93E00DF2825 /* Qodi */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Qodi; sourceTree = "<group>"; };
+		2607FFB42AE58F3800790DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		268B11072AE639EF00083D1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		268B11092AE63FDC00083D1F /* BarcodeScannerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerRepresentable.swift; sourceTree = "<group>"; };
+		268B110B2AE6404A00083D1F /* BarcodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
+		268B110D2AE6410D00083D1F /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		26BBE1052AD0A139004B0350 /* Qodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26BBE1082AD0A139004B0350 /* QodiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QodiApp.swift; sourceTree = "<group>"; };
+		26BBE10C2AD0A139004B0350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26BBE10F2AD0A139004B0350 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26BBE11F2AD0A29F004B0350 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		26BBE1252AD0A7DB004B0350 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		26BBE1282AD0A838004B0350 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		26BBE12A2AD0A97A004B0350 /* OnboardingViewPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPages.swift; sourceTree = "<group>"; };
+		26BBE12C2AD0AAEB004B0350 /* FinalOnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalOnboardingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FCF87F3B2AE5B8F400DF2825 /* Frameworks */ = {
+		26BBE1022AD0A139004B0350 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -26,32 +49,156 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FCF87F352AE5B8F400DF2825 = {
+		2659A6892AF1739F005E1B6D /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				FCF87F4F2AE5B93E00DF2825 /* Qodi */,
-				FCF87F3F2AE5B8F400DF2825 /* Products */,
+				26BBE12A2AD0A97A004B0350 /* OnboardingViewPages.swift */,
+				26BBE12C2AD0AAEB004B0350 /* FinalOnboardingPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		26A1A5452AF1C81400B1C5B4 /* Results View */ = {
+			isa = PBXGroup;
+			children = (
+				268B110D2AE6410D00083D1F /* ResultView.swift */,
+			);
+			path = "Results View";
+			sourceTree = "<group>";
+		};
+		26BBE0FC2AD0A139004B0350 = {
+			isa = PBXGroup;
+			children = (
+				26BBE1072AD0A139004B0350 /* Qodi */,
+				26BBE1062AD0A139004B0350 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FCF87F3F2AE5B8F400DF2825 /* Products */ = {
+		26BBE1062AD0A139004B0350 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCF87F3E2AE5B8F400DF2825 /* Qodi.app */,
+				26BBE1052AD0A139004B0350 /* Qodi.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		26BBE1072AD0A139004B0350 /* Qodi */ = {
+			isa = PBXGroup;
+			children = (
+				2607FFB42AE58F3800790DF5 /* Info.plist */,
+				26BBE11B2AD0A1CF004B0350 /* App */,
+				26BBE11A2AD0A1CD004B0350 /* Core */,
+				26BBE1192AD0A1CB004B0350 /* Extensions */,
+				26BBE1182AD0A1C9004B0350 /* Models */,
+				26BBE10C2AD0A139004B0350 /* Assets.xcassets */,
+				26BBE10E2AD0A139004B0350 /* Preview Content */,
+			);
+			path = Qodi;
+			sourceTree = "<group>";
+		};
+		26BBE10E2AD0A139004B0350 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				26BBE10F2AD0A139004B0350 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26BBE1182AD0A1C9004B0350 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				268B110B2AE6404A00083D1F /* BarcodeData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		26BBE1192AD0A1CB004B0350 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				268B11072AE639EF00083D1F /* ViewController.swift */,
+				268B11092AE63FDC00083D1F /* BarcodeScannerRepresentable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		26BBE11A2AD0A1CD004B0350 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				26BBE1222AD0A757004B0350 /* Home */,
+				26BBE1212AD0A748004B0350 /* Onboarding */,
+				26BBE11C2AD0A205004B0350 /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		26BBE11B2AD0A1CF004B0350 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				26BBE1082AD0A139004B0350 /* QodiApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		26BBE11C2AD0A205004B0350 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				26BBE11E2AD0A23C004B0350 /* Root View */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		26BBE11E2AD0A23C004B0350 /* Root View */ = {
+			isa = PBXGroup;
+			children = (
+				26BBE11F2AD0A29F004B0350 /* SplashScreenView.swift */,
+			);
+			path = "Root View";
+			sourceTree = "<group>";
+		};
+		26BBE1212AD0A748004B0350 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2659A6892AF1739F005E1B6D /* Pages */,
+				26BBE1232AD0A784004B0350 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		26BBE1222AD0A757004B0350 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				26A1A5452AF1C81400B1C5B4 /* Results View */,
+				26BBE1272AD0A805004B0350 /* Landing View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		26BBE1232AD0A784004B0350 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				26BBE1252AD0A7DB004B0350 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		26BBE1272AD0A805004B0350 /* Landing View */ = {
+			isa = PBXGroup;
+			children = (
+				26BBE1282AD0A838004B0350 /* HomeView.swift */,
+			);
+			path = "Landing View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FCF87F3D2AE5B8F400DF2825 /* Qodi */ = {
+		26BBE1042AD0A139004B0350 /* Qodi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCF87F4C2AE5B8F500DF2825 /* Build configuration list for PBXNativeTarget "Qodi" */;
+			buildConfigurationList = 26BBE1132AD0A139004B0350 /* Build configuration list for PBXNativeTarget "Qodi" */;
 			buildPhases = (
-				FCF87F3A2AE5B8F400DF2825 /* Sources */,
-				FCF87F3B2AE5B8F400DF2825 /* Frameworks */,
-				FCF87F3C2AE5B8F400DF2825 /* Resources */,
+				26BBE1012AD0A139004B0350 /* Sources */,
+				26BBE1022AD0A139004B0350 /* Frameworks */,
+				26BBE1032AD0A139004B0350 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -59,25 +206,25 @@
 			);
 			name = Qodi;
 			productName = Qodi;
-			productReference = FCF87F3E2AE5B8F400DF2825 /* Qodi.app */;
+			productReference = 26BBE1052AD0A139004B0350 /* Qodi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FCF87F362AE5B8F400DF2825 /* Project object */ = {
+		26BBE0FD2AD0A139004B0350 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					FCF87F3D2AE5B8F400DF2825 = {
-						CreatedOnToolsVersion = 15.0.1;
+					26BBE1042AD0A139004B0350 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = FCF87F392AE5B8F400DF2825 /* Build configuration list for PBXProject "Qodi" */;
+			buildConfigurationList = 26BBE1002AD0A139004B0350 /* Build configuration list for PBXProject "Qodi" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -85,39 +232,50 @@
 				en,
 				Base,
 			);
-			mainGroup = FCF87F352AE5B8F400DF2825;
-			productRefGroup = FCF87F3F2AE5B8F400DF2825 /* Products */;
+			mainGroup = 26BBE0FC2AD0A139004B0350;
+			productRefGroup = 26BBE1062AD0A139004B0350 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FCF87F3D2AE5B8F400DF2825 /* Qodi */,
+				26BBE1042AD0A139004B0350 /* Qodi */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FCF87F3C2AE5B8F400DF2825 /* Resources */ = {
+		26BBE1032AD0A139004B0350 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF87F502AE5B93E00DF2825 /* Qodi in Resources */,
+				26BBE1102AD0A139004B0350 /* Preview Assets.xcassets in Resources */,
+				26BBE10D2AD0A139004B0350 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FCF87F3A2AE5B8F400DF2825 /* Sources */ = {
+		26BBE1012AD0A139004B0350 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BBE12D2AD0AAEB004B0350 /* FinalOnboardingPage.swift in Sources */,
+				268B110A2AE63FDC00083D1F /* BarcodeScannerRepresentable.swift in Sources */,
+				26BBE12B2AD0A97A004B0350 /* OnboardingViewPages.swift in Sources */,
+				268B110E2AE6410D00083D1F /* ResultView.swift in Sources */,
+				268B11082AE639EF00083D1F /* ViewController.swift in Sources */,
+				26BBE1202AD0A29F004B0350 /* SplashScreenView.swift in Sources */,
+				26BBE1262AD0A7DB004B0350 /* OnboardingView.swift in Sources */,
+				26BBE1092AD0A139004B0350 /* QodiApp.swift in Sources */,
+				26BBE1292AD0A838004B0350 /* HomeView.swift in Sources */,
+				268B110C2AE6404A00083D1F /* BarcodeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FCF87F4A2AE5B8F500DF2825 /* Debug */ = {
+		26BBE1112AD0A139004B0350 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -180,7 +338,7 @@
 			};
 			name = Debug;
 		};
-		FCF87F4B2AE5B8F500DF2825 /* Release */ = {
+		26BBE1122AD0A139004B0350 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +394,7 @@
 			};
 			name = Release;
 		};
-		FCF87F4D2AE5B8F500DF2825 /* Debug */ = {
+		26BBE1142AD0A139004B0350 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -244,9 +402,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Qodi/Preview Content\"";
-				DEVELOPMENT_TEAM = MRVM4S35B7;
+				DEVELOPMENT_TEAM = X6KRB3LQB4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Qodi/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App uses camera to scan barcodes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -257,7 +417,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CAC.Qodi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rahul.Qodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -265,7 +425,7 @@
 			};
 			name = Debug;
 		};
-		FCF87F4E2AE5B8F500DF2825 /* Release */ = {
+		26BBE1152AD0A139004B0350 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -273,9 +433,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Qodi/Preview Content\"";
-				DEVELOPMENT_TEAM = MRVM4S35B7;
+				DEVELOPMENT_TEAM = X6KRB3LQB4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Qodi/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App uses camera to scan barcodes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -286,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CAC.Qodi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rahul.Qodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -297,25 +459,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FCF87F392AE5B8F400DF2825 /* Build configuration list for PBXProject "Qodi" */ = {
+		26BBE1002AD0A139004B0350 /* Build configuration list for PBXProject "Qodi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF87F4A2AE5B8F500DF2825 /* Debug */,
-				FCF87F4B2AE5B8F500DF2825 /* Release */,
+				26BBE1112AD0A139004B0350 /* Debug */,
+				26BBE1122AD0A139004B0350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCF87F4C2AE5B8F500DF2825 /* Build configuration list for PBXNativeTarget "Qodi" */ = {
+		26BBE1132AD0A139004B0350 /* Build configuration list for PBXNativeTarget "Qodi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF87F4D2AE5B8F500DF2825 /* Debug */,
-				FCF87F4E2AE5B8F500DF2825 /* Release */,
+				26BBE1142AD0A139004B0350 /* Debug */,
+				26BBE1152AD0A139004B0350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FCF87F362AE5B8F400DF2825 /* Project object */;
+	rootObject = 26BBE0FD2AD0A139004B0350 /* Project object */;
 }

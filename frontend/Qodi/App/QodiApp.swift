@@ -2,7 +2,7 @@
 //  QodiApp.swift
 //  Qodi
 //
-//  Created by Miyaz Ansari on 10/22/23.
+//  Created by Rahul Boggavarapu on 10/6/23.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct QodiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
     }
 }
