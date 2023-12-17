@@ -8,6 +8,8 @@ const openai = new OpenAI();
 const REQUEST_PROMPT =
   'Summarize the health effects of these ingredients. Be critical. If there is even a slight impact please state it. If there are ingredients labeled as "may contain" or "less than 2% of" please still include them and indicate it in your response. Separate the ingredients as they are separated by commas. Respond ONLY with an array that has JSON objects with the parameters ingredient and description.';
 
+export const runtime = "edge";
+
 // Define Express route for GET requests with a UPC code in the path
 export async function GET(
   req: NextRequest,
