@@ -9,7 +9,7 @@ datasource db {
 
 model ingredients {
   id           Int      @id @default(autoincrement())
-  ingredient   String   @db.Text
-  description  String   @db.Text
+  ingredient   String   @unique(map: "ingredient") @db.VarChar(1000)
+  description  String   @db.VarChar(5000)
   last_updated DateTime @default(now()) @db.DateTime(0)
 }
