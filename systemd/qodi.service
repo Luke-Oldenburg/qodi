@@ -1,0 +1,12 @@
+[Unit]
+Description=Start qodi
+DefaultDependencies=no
+Before=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /home/lukeo/qodi/systemd/qodi.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
