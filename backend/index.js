@@ -1,26 +1,19 @@
+import "dotenv/config"
+import Express from "express";
 import OpenAI from "openai";
+import { PrismaClient } from "@prisma/client";
 
-import type { NextRequest } from "next/server";
-
-import { PrismaClient } from "@prisma/client/edge";
-import { withAccelerate } from "@prisma/extension-accelerate";
-
+const express = new Express();
 const openai = new OpenAI();
-
-const prisma = new PrismaClient().$extends(withAccelerate());
+const prisma = new PrismaClient();
 
 // Define GPT-3.5 prompt for requesting health effects of ingredients
 const REQUEST_PROMPT =
   'Summarize the health effects of these ingredients. Be critical. If there is even a slight impact please state it. If there are ingredients labeled as "may contain" or "less than 2% of" please still include them and indicate it in your response. Separate the ingredients as they are separated by commas. Respond ONLY with an array that has JSON objects with the parameters ingredient and description.';
 
-export const runtime = "edge";
-
 // Define Express route for GET requests with a UPC code in the path
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { upc: string } }
-) {
-  const upc = params.upc;
+express.get("/:upc", async (req, res) => {
+  const upc = req.params.upc;
   console.log(`Received request for UPC ${upc}`);
 
   // Fetch food data from FDC (FoodData Central) API
@@ -46,7 +39,7 @@ export async function GET(
 
     // Check if ingredients are already in database
     for (let ingredient of food_data.foods[0].ingredients.split(", ")) {
-      const ingredientExists: { description: string } | null =
+      const ingredientExists =
         await prisma.ingredients.findUnique({
           where: {
             ingredient: ingredient,
@@ -77,11 +70,11 @@ export async function GET(
 
       // Parse JSON response from OpenAI API
       let content = chatCompletion.choices[0].message.content;
-      console.log(content);
+      console.log("Received a response from OpenAI.");
 
       // Check if chatGPT returned a response
       if (!content) {
-        console.error("No response from OpenAI.");
+        console.error("Did not receive a response from OpenAI.");
         return Response.error();
       }
 
@@ -106,9 +99,14 @@ export async function GET(
     }
 
     // Send response back to the client
-    return Response.json(response);
+    res.json(response);
   } else {
     console.error(`No ingredients found for UPC ${upc}.`);
     return Response.error();
   }
-}
+});
+
+// Start Express server
+express.listen(process.env["PORT"], () => {
+  console.log(`Qodi API is now listening on port ${process.env["PORT"]}`);
+});

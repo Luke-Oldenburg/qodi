@@ -1,0 +1,28 @@
+{
+
+  "name": "qodi",
+  "version": "1.0.0",
+  "description": "A QR code scanner app that shows ingredient breakdowns of food items.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luke-Oldenburg/qodi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Luke-Oldenburg/qodi/issues"
+  },
+  "homepage": "https://github.com/Luke-Oldenburg/qodi#readme",
+  "dependencies": {
+    "@prisma/client": "^5.12.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openai": "^4.21.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.12.1"
+  }
+}
