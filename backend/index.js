@@ -1,7 +1,9 @@
-import "dotenv/config"
+import "dotenv/config";
+import "./instrument.js";
 import Express from "express";
 import OpenAI from "openai";
 import { PrismaClient } from "@prisma/client";
+import * as Sentry from "@sentry/node";
 
 const express = new Express();
 const openai = new OpenAI();
@@ -39,12 +41,11 @@ express.get("/:upc", async (req, res) => {
 
     // Check if ingredients are already in database
     for (let ingredient of food_data.foods[0].ingredients.split(", ")) {
-      const ingredientExists =
-        await prisma.ingredients.findUnique({
-          where: {
-            ingredient: ingredient,
-          },
-        });
+      const ingredientExists = await prisma.ingredients.findUnique({
+        where: {
+          ingredient: ingredient,
+        },
+      });
 
       if (ingredientExists) {
         response.push({
@@ -105,6 +106,8 @@ express.get("/:upc", async (req, res) => {
     return Response.error();
   }
 });
+
+Sentry.setupExpressErrorHandler(express);
 
 // Start Express server
 express.listen(process.env["PORT"], () => {
