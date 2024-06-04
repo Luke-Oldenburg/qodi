@@ -9,9 +9,13 @@ const express = new Express();
 const openai = new OpenAI();
 const prisma = new PrismaClient();
 
-// Define GPT-3.5 prompt for requesting health effects of ingredients
-const REQUEST_PROMPT =
-  'Summarize the health effects of these ingredients. Be critical. If there is even a slight impact please state it. If there are ingredients labeled as "may contain" or "less than 2% of" please still include them and indicate it in your response. Separate the ingredients as they are separated by commas. Respond ONLY with an array that has JSON objects with the parameters ingredient and description.';
+// Define GPT4 prompt for requesting health effects of ingredients
+const REQUEST_PROMPT = `Summarize the health effects of these ingredients. Be critical. If there is even a slight impact please state it.
+  There may be some additional syntax or words attached to their name such as a ( or the words "less than 2% of". Do NOT replace brackets with curly braces or parentheses.
+  Respond ONLY with an array that has JSON objects with the parameters ingredient, display_name, and description.
+  ingredient should be the name as it came from our array. Do NOT modify that at all. Include every ingredient that has been sent to you EXACTLY as it has been sent to you.
+  display_name should be a pretty version of the ingredient name. If there is any extra punctuation or words that shouldn't be attached, remove them in this string. Also correct the capitalization.
+  description should be a description of the health impacts of the ingredient and any potential risks associated with it.`;
 
 // Define Express route for GET requests with a UPC code in the path
 express.get("/:upc", async (req, res) => {
@@ -36,11 +40,12 @@ express.get("/:upc", async (req, res) => {
   if (food_data.foods[0]) {
     console.log(`Found ingredients: ${food_data.foods[0].ingredients}`);
 
-    let aiIngredients = "";
+    let aiIngredients = [];
     let response = [];
 
     // Check if ingredients are already in database
-    for (let ingredient of food_data.foods[0].ingredients.split(", ")) {
+    let ingredients = food_data.foods[0].ingredients.split(", ");
+    for (let ingredient of ingredients) {
       const ingredientExists = await prisma.ingredients.findUnique({
         where: {
           ingredient: ingredient,
@@ -50,52 +55,75 @@ express.get("/:upc", async (req, res) => {
       if (ingredientExists) {
         response.push({
           ingredient: ingredient,
+          display_name: ingredientExists.display_name,
           description: ingredientExists.description,
         });
       } else {
-        aiIngredients += ingredient + ", ";
+        aiIngredients.push(ingredient);
       }
     }
 
-    if (aiIngredients.length > 0) {
-      // Construct prompt and send to OpenAI API
-      const chatCompletion = await openai.chat.completions.create({
-        messages: [
-          {
-            role: "user",
-            content: `Ingredients: ${aiIngredients}\n${REQUEST_PROMPT}`,
-          },
-        ],
-        model: "gpt-3.5-turbo",
-      });
-
-      // Parse JSON response from OpenAI API
-      let content = chatCompletion.choices[0].message.content;
-      console.log("Received a response from OpenAI.");
-
-      // Check if chatGPT returned a response
-      if (!content) {
-        console.error("Did not receive a response from OpenAI.");
-        return Response.error();
-      }
-
-      // Add ingredients from chatGPT to response and database
-      let contentObj = JSON.parse(content);
-      for (let ingredient of contentObj) {
-        response.push(ingredient);
-        await prisma.ingredients.upsert({
-          create: {
-            ingredient: ingredient.ingredient,
-            description: ingredient.description,
-          },
-          where: {
-            ingredient: ingredient.ingredient,
-          },
-          update: {
-            ingredient: ingredient.ingredient,
-            description: ingredient.description,
-          },
+    for (let i = 0; i < 3; i++) {
+      if (aiIngredients.length > 0) {
+        console.log(
+          `Sending the following ingredients to OpenAI: ${aiIngredients}`
+        );
+        // Construct prompt and send to OpenAI API
+        const chatCompletion = await openai.chat.completions.create({
+          messages: [
+            {
+              role: "user",
+              content: `${REQUEST_PROMPT}\n[${aiIngredients
+                .map((i) => `"${i}"`)
+                .join(", ")}]`,
+            },
+          ],
+          model: "gpt-4",
         });
+
+        // Parse JSON response from OpenAI API
+        let content = chatCompletion.choices[0].message.content;
+        console.log("Received a response from OpenAI.");
+
+        // Check if chatGPT returned a response
+        if (!content) {
+          console.error("Did not receive a response from OpenAI.");
+          return Response.error();
+        }
+
+        // Add ingredients from chatGPT to response and database
+        let contentObj = {};
+        try {
+          contentObj = JSON.parse(content);
+
+        } catch {
+          continue;
+        }
+        for (let ingredient of contentObj) {
+          response.push(ingredient);
+          await prisma.ingredients.upsert({
+            create: {
+              ingredient: ingredient.ingredient,
+              display_name: ingredient.display_name,
+              description: ingredient.description,
+            },
+            where: {
+              ingredient: ingredient.ingredient,
+            },
+            update: {
+              ingredient: ingredient.ingredient,
+              display_name: ingredient.display_name,
+              description: ingredient.description,
+            },
+          });
+        }
+
+        if (contentObj.length != aiIngredients.length) {
+          let ingredientArray = contentObj.map(obj => obj.ingredient);
+          aiIngredients = aiIngredients.filter(ingredient => !ingredientArray.includes(ingredient));
+        }
+      } else {
+        break;
       }
     }
 
