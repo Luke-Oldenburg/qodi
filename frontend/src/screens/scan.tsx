@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Text, View, TouchableOpacity, Button } from "react-native";
 import { CameraView, useCameraPermissions, CameraType } from "expo-camera";
+import { MaterialIcons } from "@expo/vector-icons";
 
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
-import type { RootStackParamList } from "../pages";
+import type { RootStackParamList } from "../types/pages";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Scan">;
 
@@ -38,25 +39,30 @@ export default function ScanScreen({ navigation }: Props) {
   }
 
   return (
-    <View className="flex h-full w-screen justify-evenly items-center bg-black">
+    <View className="flex relative h-full w-screen justify-end items-center bg-black">
       <CameraView
         facing={facing}
         className="flex w-screen"
         barcodeScannerSettings={{
-          barcodeTypes: ["upc_a", "upc_e"],
+          barcodeTypes: ["upc_a", "ean13"],
         }}
         onBarcodeScanned={(data) => {
-          setCode(data.data);
+          setCode(`0${data.data}`);
         }}
       >
-        <View className="h-5/6 w-screen" />
+        <View className="h-full w-screen" />
       </CameraView>
-      <TouchableOpacity
-        className="h-10 w-2/3 rounded-md flex justify-center items-center z-20 bg-orange-500"
-        onPress={toggleCameraFacing}
-      >
-        <Text className="text-3xl">Flip Camera</Text>
-      </TouchableOpacity>
+      <View className="absolute bottom-3 flex flex-row justify-evenly py-2 px-5 items-center mx-5 bg-black rounded-full">
+        <TouchableOpacity
+          className="flex justify-center items-center z-20 mr-5"
+          onPress={toggleCameraFacing}
+        >
+          <MaterialIcons name="flip-camera-ios" size={30} color="white" />
+        </TouchableOpacity>
+        <Text className="justify-self-end text-white text-lg text-center flex-shrink">
+          Scan any UPC-A or EAN-13 barcode to get started!
+        </Text>
+      </View>
     </View>
   );
 }
