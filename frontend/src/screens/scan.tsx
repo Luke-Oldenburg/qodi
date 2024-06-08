@@ -11,7 +11,6 @@ type Props = NativeStackScreenProps<RootStackParamList, "Scan">;
 export default function ScanScreen({ navigation }: Props) {
   const [facing, setFacing] = useState<CameraType>("back");
   const [permission, requestPermission] = useCameraPermissions();
-  const [code, setCode] = useState<string>("");
 
   if (!permission) {
     return <View />;
@@ -32,12 +31,6 @@ export default function ScanScreen({ navigation }: Props) {
     setFacing((current) => (current === "back" ? "front" : "back"));
   }
 
-  if (code) {
-    const upcCode = code;
-    setCode("");
-    navigation.navigate("Loading", { code: upcCode });
-  }
-
   return (
     <View className="flex relative h-full w-screen justify-end items-center bg-black">
       <CameraView
@@ -47,7 +40,7 @@ export default function ScanScreen({ navigation }: Props) {
           barcodeTypes: ["upc_a", "ean13"],
         }}
         onBarcodeScanned={(data) => {
-          setCode(`0${data.data}`);
+          navigation.navigate("Loading", { code: `0${data.data}` });
         }}
       >
         <View className="h-full w-screen" />

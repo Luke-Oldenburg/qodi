@@ -5,5 +5,7 @@ export type RootStackParamList = {
   Loading: { code: string };
   Ingredients: {
     data: BackendResponse;
+    name: string;
+    brand: string;
   };
 };
