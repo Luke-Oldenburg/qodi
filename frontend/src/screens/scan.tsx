@@ -18,8 +18,8 @@ export default function ScanScreen({ navigation }: Props) {
 
   if (!permission.granted) {
     return (
-      <View>
-        <Text style={{ textAlign: "center" }}>
+      <View className="flex justify-center items-center mx-10 h-full">
+        <Text className="text-center text-white text-xl my-5">
           Qodi needs your permission to show the camera.
         </Text>
         <Button onPress={requestPermission} title="grant permission" />
