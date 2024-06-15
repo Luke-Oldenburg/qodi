@@ -4,6 +4,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useEffect } from "react";
+import { AppState, Platform } from "react-native";
+import type { AppStateStatus } from "react-native";
+import { focusManager } from "@tanstack/react-query";
 
 import ScanScreen from "./screens/scan";
 import IngredientsScreen from "./screens/ingredients";
@@ -15,6 +19,18 @@ const Tabs = createBottomTabNavigator<RootStackParamList>();
 const queryClient = new QueryClient();
 
 export default function App() {
+  function onAppStateChange(status: AppStateStatus) {
+    if (Platform.OS !== "web") {
+      focusManager.setFocused(status === "active");
+    }
+  }
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener("change", onAppStateChange);
+
+    return () => subscription.remove();
+  }, []);
+
   return (
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>

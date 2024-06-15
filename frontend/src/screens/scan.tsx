@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Text, View, TouchableOpacity, Button } from "react-native";
 import { CameraView, useCameraPermissions, CameraType } from "expo-camera";
 import { MaterialIcons } from "@expo/vector-icons";
-import { useQueryClient } from "@tanstack/react-query";
 
 import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 import type { RootStackParamList } from "../types/pages";
@@ -12,7 +11,6 @@ type Props = BottomTabScreenProps<RootStackParamList, "Scan">;
 export default function ScanScreen({ navigation }: Props) {
   const [facing, setFacing] = useState<CameraType>("back");
   const [permission, requestPermission] = useCameraPermissions();
-  const queryClient = useQueryClient();
 
   if (!permission) {
     return <View />;
@@ -42,9 +40,6 @@ export default function ScanScreen({ navigation }: Props) {
           barcodeTypes: ["upc_a", "ean13"],
         }}
         onBarcodeScanned={(data) => {
-          queryClient.invalidateQueries({
-            queryKey: ["info"],
-          });
           navigation.navigate("Ingredients", { code: `0${data.data}` });
         }}
       >

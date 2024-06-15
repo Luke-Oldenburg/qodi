@@ -2,6 +2,8 @@ import { View, Text, ScrollView, ActivityIndicator } from "react-native";
 import { useQuery } from "@tanstack/react-query";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { useRefreshOnFocus } from "@/hooks/useRefreshOnFocus";
+
 import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 import type { RootStackParamList } from "../types/pages";
 import type { HealthResponse, InfoResponse } from "../types/backend";
@@ -33,6 +35,11 @@ export default function IngredientsScreen({ route }: Props) {
       }
       return res.json();
     },
+  });
+
+  useRefreshOnFocus(async () => {
+    info.refetch();
+    health.refetch();
   });
 
   if (info.isError || health.isError) {
