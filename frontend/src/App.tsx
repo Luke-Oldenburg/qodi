@@ -8,8 +8,10 @@ import { useEffect } from "react";
 import { AppState, Platform } from "react-native";
 import type { AppStateStatus } from "react-native";
 import { focusManager } from "@tanstack/react-query";
+import Toast from "react-native-toast-message";
 
 import ScanScreen from "./screens/scan";
+import SavedScreen from "./screens/saved";
 import IngredientsScreen from "./screens/ingredients";
 
 import type { RootStackParamList } from "./types/pages";
@@ -62,9 +64,23 @@ export default function App() {
                 ),
               }}
             />
+            <Tabs.Screen
+              name="Saved"
+              component={SavedScreen}
+              options={{
+                tabBarIcon: ({ focused }) => (
+                  <MaterialIcons
+                    name="bookmark"
+                    size={24}
+                    color={focused ? "#0068C8" : "white"}
+                  />
+                ),
+              }}
+            />
           </Tabs.Navigator>
         </NavigationContainer>
       </QueryClientProvider>
+      <Toast />
     </SafeAreaProvider>
   );
 }
