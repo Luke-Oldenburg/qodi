@@ -1,46 +1,55 @@
 import { registerRootComponent } from "expo";
 import { NavigationContainer, DarkTheme } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { MaterialIcons } from "@expo/vector-icons";
 
 import ScanScreen from "./screens/scan";
-import LoadingScreen from "./screens/loading";
 import IngredientsScreen from "./screens/ingredients";
-
-import ScanBack from "./components/scan-back";
 
 import type { RootStackParamList } from "./types/pages";
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Tabs = createBottomTabNavigator<RootStackParamList>();
+
+const queryClient = new QueryClient();
 
 export default function App() {
   return (
-    <NavigationContainer theme={DarkTheme}>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Scan"
-          component={ScanScreen}
-          options={{
-            title: "Scan a barcode",
-            headerBackVisible: false,
-          }}
-        />
-        <Stack.Screen
-          name="Loading"
-          component={LoadingScreen}
-          options={{
-            title: "Loading product",
-            headerBackVisible: false,
-          }}
-        />
-        <Stack.Screen
-          name="Ingredients"
-          component={IngredientsScreen}
-          options={{
-            headerLeft: () => <ScanBack />,
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <QueryClientProvider client={queryClient}>
+        <NavigationContainer theme={DarkTheme}>
+          <Tabs.Navigator screenOptions={{ headerShown: false }}>
+            <Tabs.Screen
+              name="Scan"
+              component={ScanScreen}
+              options={{
+                tabBarIcon: ({ focused }) => (
+                  <MaterialIcons
+                    name="camera"
+                    size={24}
+                    color={focused ? "#0068C8" : "white"}
+                  />
+                ),
+              }}
+            />
+            <Tabs.Screen
+              name="Ingredients"
+              component={IngredientsScreen}
+              options={{
+                tabBarIcon: ({ focused }) => (
+                  <MaterialIcons
+                    name="info"
+                    size={24}
+                    color={focused ? "#0068C8" : "white"}
+                  />
+                ),
+              }}
+            />
+          </Tabs.Navigator>
+        </NavigationContainer>
+      </QueryClientProvider>
+    </SafeAreaProvider>
   );
 }
 
