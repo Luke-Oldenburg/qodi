@@ -38,14 +38,21 @@ express.get("/info/:upc", async (req, res) => {
 
   // Make sure that the food item was found
   if (food_data.foods[0]) {
+    function toTitleCase(str) {
+      return str.replace(/\w\S*/g, (txt) => {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      });
+    }
+
+    let name = food_data.foods[0].description.trim();
+    let brand = food_data.foods[0].brandName.trim();
     let response = {
-      "name": food_data.foods[0].description,
-      "brand": food_data.foods[0].brandName
+      name: toTitleCase(name),
+      brand: toTitleCase(brand),
     };
     console.log("Found name and brand:");
     console.table(response);
     res.json(response);
-
   } else {
     console.error(`No food item found for UPC ${upc}.`);
     return Response.error();
@@ -129,7 +136,6 @@ express.get("/health/:upc", async (req, res) => {
         let contentObj = {};
         try {
           contentObj = JSON.parse(content);
-
         } catch {
           continue;
         }
@@ -153,8 +159,10 @@ express.get("/health/:upc", async (req, res) => {
         }
 
         if (contentObj.length != aiIngredients.length) {
-          let ingredientArray = contentObj.map(obj => obj.ingredient);
-          aiIngredients = aiIngredients.filter(ingredient => !ingredientArray.includes(ingredient));
+          let ingredientArray = contentObj.map((obj) => obj.ingredient);
+          aiIngredients = aiIngredients.filter(
+            (ingredient) => !ingredientArray.includes(ingredient)
+          );
         }
       } else {
         break;
