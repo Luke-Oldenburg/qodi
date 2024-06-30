@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "qodi",
+    "name": "Qodi Health",
     "slug": "qodi",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,7 +23,7 @@
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO"
       ],
-      "package": "com.lukeoldenburg.qodi"
+      "package": "com.hackclub.qodi"
     },
     "web": {
       "favicon": "./assets/favicon.png"
