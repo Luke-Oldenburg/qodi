@@ -12,7 +12,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hackclub.qodi"
     },
     "android": {
       "adaptiveIcon": {
@@ -35,6 +36,11 @@
           "cameraPermission": "Allow Qodi to access your camera"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9776b1f3-06dc-48fc-b381-31d1260540f7"
+      }
+    }
   }
 }
