@@ -40,7 +40,7 @@ export default function ScanScreen({ navigation }: Props) {
           barcodeTypes: ["upc_a", "ean13"],
         }}
         onBarcodeScanned={(data) => {
-          navigation.navigate("Ingredients", { code: `0${data.data}` });
+          navigation.navigate("Ingredients", { code: `${data.data}` });
         }}
       >
         <View className="h-full w-screen" />
