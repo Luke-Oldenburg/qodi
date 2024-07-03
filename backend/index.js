@@ -20,7 +20,7 @@ const REQUEST_PROMPT = `Summarize the health effects of these ingredients. Be cr
 // Define Express route for GET requests with a UPC code in the path
 express.get("/info/:upc", async (req, res) => {
   const upc = req.params.upc;
-  console.log(`Received GET request for /name/${upc}`);
+  console.log(`Received GET request for /info/${upc}`);
 
   // Fetch food data from FDC (FoodData Central) API
   let fdc_res = null;
@@ -61,7 +61,7 @@ express.get("/info/:upc", async (req, res) => {
 
 express.get("/health/:upc", async (req, res) => {
   const upc = req.params.upc;
-  console.log(`Received GET request for /info/${upc}`);
+  console.log(`Received GET request for /health/${upc}`);
 
   // Fetch food data from FDC (FoodData Central) API
   let fdc_res = null;
