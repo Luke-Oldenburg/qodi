@@ -37,7 +37,12 @@ export default function App() {
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>
         <NavigationContainer theme={DarkTheme}>
-          <Tabs.Navigator screenOptions={{ headerShown: false }}>
+          <Tabs.Navigator
+            screenOptions={{
+              headerShown: false,
+              tabBarLabelStyle: { marginBottom: 2 },
+            }}
+          >
             <Tabs.Screen
               name="Scan"
               component={ScanScreen}
