@@ -40,7 +40,12 @@ export default function ScanScreen({ navigation }: Props) {
           barcodeTypes: ["upc_a", "ean13"],
         }}
         onBarcodeScanned={(data) => {
-          navigation.navigate("Ingredients", { code: `${data.data}` });
+          if (data.data.length == 12) {
+            navigation.navigate("Ingredients", { code: `0${data.data}` });
+
+          } else if (data.data.length == 13) {
+            navigation.navigate("Ingredients", { code: `${data.data}` });
+          }
         }}
       >
         <View className="h-full w-screen" />
