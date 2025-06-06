@@ -1,12 +1,10 @@
 import "dotenv/config";
 import "./instrument.js";
 import Express from "express";
-import OpenAI from "openai";
 import { PrismaClient } from "@prisma/client";
 import * as Sentry from "@sentry/node";
 
 const express = new Express();
-const openai = new OpenAI();
 const prisma = new PrismaClient();
 
 // Define GPT4 prompt for requesting health effects of ingredients
@@ -109,17 +107,25 @@ express.get("/health/:upc", async (req, res) => {
         console.log(
           `Sending the following ingredients to OpenAI: ${aiIngredients}`
         );
+
         // Construct prompt and send to OpenAI API
-        const chatCompletion = await openai.chat.completions.create({
-          messages: [
-            {
-              role: "user",
-              content: `${REQUEST_PROMPT}\n[${aiIngredients
-                .map((i) => `"${i}"`)
-                .join(", ")}]`,
-            },
-          ],
-          model: "gpt-4",
+        const chatCompletion = await fetch("https://ai.hackclub.com/chat/completions", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            messages: [
+              {
+                role: "user",
+                content: `${REQUEST_PROMPT}\n[${aiIngredients
+                  .map((i) => `"${i}"`)
+                  .join(", ")}]`
+              }
+            ]
+          })
+        }).then(function (response) {
+          return response.json();
         });
 
         // Parse JSON response from OpenAI API
