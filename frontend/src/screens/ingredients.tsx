@@ -20,6 +20,11 @@ import type { HealthResponse, InfoResponse } from "../types/backend";
 type Props = BottomTabScreenProps<RootStackParamList, "Ingredients">;
 
 export default function IngredientsScreen({ route, navigation }: Props) {
+  if (!route.params) {
+    navigation.navigate("Scan");
+    return null;
+  }
+
   const info = useQuery({
     queryKey: ["info", route.params.code],
     queryFn: async ({ queryKey }): Promise<InfoResponse> => {
@@ -58,11 +63,6 @@ export default function IngredientsScreen({ route, navigation }: Props) {
     health.refetch();
     isSaved.refetch();
   });
-
-  if (!route.params.code) {
-    navigation.navigate("Scan");
-    return null;
-  }
 
   if (info.isError || health.isError) {
     return (
